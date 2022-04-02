@@ -1,0 +1,38 @@
+{
+    "scopeName": "text.flag-txt",
+    "fileTypes": [
+        "txt",
+        "ftxt"
+    ],
+    "foldingStartMarker": "",
+    "foldingStopMarker": "",
+    "patterns" :[
+        {
+            "name"  : "comment.line.flag-txt",
+            "match" : "^!!!\\s*(.+)$"
+        },
+        {
+            "name"  : "markup.bold.flag-txt",
+            "match" : "【.+?】"
+        },
+        {
+            "name"  : "keyword.control.flag-txt",
+            "match" : "^(###|#[程框項表習]|#圖\\(.+?\\))"
+        },
+        {
+            "name"  : "support.function.flag-txt",
+            "match" : "^(第\\s*\\d+\\s*章.+$|([\\d+]|[A-Z]+)\\-\\d+(.+)$|\\[.+\\]$|<<.+>>)"
+        },
+        {
+            "name": "string.quoted.double.flag-txt",
+            "begin": "\"",
+            "end" : "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.flag-txt",
+                    "match": "\\."
+                }
+            ]
+        }
+    ]
+}
